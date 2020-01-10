@@ -12,5 +12,17 @@ App.config(function ($routeProvider) {
                 templateUrl: 'src/templates/contact-create.html'
             }
         )
+        .when('/:id',
+            {
+                controller: 'ContactInfoController',
+                templateUrl: 'src/templates/contact-info.html'
+            }
+        )
+        .when('/update/:id',
+            {
+                controller: 'ContactUpdateController',
+                templateUrl: 'src/templates/contact-update.html'
+            }
+        )
         .otherwise( { redirectTo: '/' } );
 });
